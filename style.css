@@ -108,19 +108,23 @@ nav,.navbar-collapsed, .navbar-collapsed > ul, .nav-btn{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding-top:100px;
 }
 .banner-sec{
     position:relative;
     z-index:-2;
 }
 .banner-content-box{
-    position: absolute;
-    top:293px;
-    left: 407px;
-    max-width: 793px;
-    height:371px;
-    border-radius: 20px;
-    background: #FFFFFF;
+    max-width:793px;
+    margin: 0 auto;
+    width:100%;
+    background:#FFFFFF;
+    border-radius: 18px;
+    
+    text-align:center;
 }
 .banner-content{
     padding:76px 60px;
@@ -192,12 +196,19 @@ h2{
 }
 .mission_left_content{
 
-    margin: 0 auto;
+    margin-right: auto;
 }
 main > img{
     width:100%;
     height:100%;
     object-fit:cover;
+    border-top-right-radius: 20px;
+}
+sub > img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-top-left-radius: 20px;
 }
 h2{
     font-size:45px;
@@ -209,6 +220,7 @@ h2{
 
 .main{
     max-width:641px;
+    margin: 0 auto;
     position:relative;
 }
 .sub{
@@ -281,11 +293,14 @@ background:transparent;
     font-weight:400;
     color:#0D0D0D;
 }
-.ouick-links > li{
+.ouick-links  a{
     font-size:16px;
     font-weight:400;
     color:#5E5E5E;
     margin-bottom:25px;
+}
+.ouick-links a:hover{
+    color:#95A986;
 }
 .social-links{
     display:flex;
@@ -296,6 +311,16 @@ background:transparent;
     margin-right:36px;
 }
 /*Media Query*/
+@media screen and (max-width:1400px){
+    .main{
+        max-width:500px;
+    }
+    .sub{
+        max-width:200px;
+        bottom:-56px;
+        right:-50px;
+    }
+}
 @media screen and (max-width:1200px){
     .navbar-collapsed{
         display:none;
@@ -305,7 +330,7 @@ background:transparent;
         margin-left:auto;
     }
     .banner-content-box {
-    position: absolute;
+    /*position: absolute;*/
     top: 100px;
     left: 132px;
     }
@@ -381,13 +406,17 @@ footer .col-4{
         padding: 15px 20px;
     }
     .banner-content-heading {
-    font-size: 47px;
+    font-size: 30px;
     }
     .banner-paragraph{
+        font-size:14px;
         margin-bottom:20px;
     }
         .banner-btn {
         padding: 0px 125px;
+    }
+    .explore-btn{
+        font-size:13px;
     }
     .col-3{
         width:100%;
@@ -404,7 +433,9 @@ footer .col-4{
     .mission_right_content{
         padding-left:0;
     }
-    
+    .advantage-heading > h2{
+        margin-bottom:60px;
+    }
 
 }
 @media screen and (max-width:425px){
@@ -419,9 +450,7 @@ footer .col-4{
     .col-7{
         width:100%;
     }
-    .main{
-        width:200px;
-    }
+    
     
 }
 
